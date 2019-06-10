@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: client-service # ==> This is Service-Id
+  cloud:
+    stream:
+      kafka:
+        binder:
+          zkNodes: "zookeeper:2181"
+          brokers: "kafka:9092"
+    config:
+      uri: http://conserver:8888

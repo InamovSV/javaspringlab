@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: native
+  application:
+    name: crud_service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
+#          brokers: kafka:9092
+#          zk-nodes: zookeeper:2181
+    config:
+      uri: http://localhost:8888
+#      uri: http://conserver:8888

@@ -1,0 +1,32 @@
+app:
+  createEmployeetopic: emptop
+  updateEmployeetopic: updemptop
+  createTaskTopic: tasktop
+  updateTaskTopic: updtasktop
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#    config:
+#     uri: http://localhost:8080
+#eureka:
+#  instance:
+#    leaseRenewalIntervalInSeconds: 1
+#    leaseExpirationDurationInSeconds: 2
+#    appname: client-service  # ==> This is a instance of ABC-SERVICE
+#  client:
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8010/eureka/
+##    healthcheck:
+##     enabled: true
+server:
+  port: 8002
+
+#management:
+#  endpoints:
+#   web:
+#    exposure:
+#     include: *

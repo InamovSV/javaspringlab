@@ -1,0 +1,52 @@
+#spring.jpa.hibernate.ddl-auto = update
+##spring.datasource.url = jdbc:postgresql://localhost:5432/lab3_0
+#spring.datasource.url = jdbc:postgresql://ec2-54-75-230-41.eu-west-1.compute.amazonaws.com:5432/ddjmdc7s0rnsni
+#spring.datasource.username = eqmmzydpmkzuok
+#spring.datasource.password=a82f5eb94bfc50ad9df0ac9b03b3c090298d9f11d3ef3912b07ca448625830e5
+#spring.datasource.driver-class-name = org.postgresql.Driver
+#spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults= false
+#spring.datasource.tomcat.validation-query=SELECT 1
+#spring.jpa.database=POSTGRESQL
+#spring.jpa.show-sql=true
+#spring.jpa.generate-ddl=true
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+app:
+  groupId: crud_1
+  employee-topic: emptop
+  task-topic: tasktop
+  brokers: localhost:9092
+#  brokers: kafka:9092
+eureka:
+ instance:
+   lease-renewal-interval-in-seconds: 1
+   lease-expiration-duration-in-seconds: 2
+ client:
+  fetch-registry: true
+  service-url:
+    defaultZone: http://localhost:8010/eureka/
+#    defaultZone: http://server:8010/eureka/
+server:
+  port: 8001
+#config.uri=http://localhost:8080
+
+management:
+  endpoints:
+   web:
+    exposure:
+     include: "*"
+
+#spring:cloud.stream.kafka.binder.brokers=localhost:9092
+#spring.cloud.stream.kafka.binder.zk-nodes=localhost:2181
+
+#bindings:
+#input:
+#destination: input
+#binder: kstream
+#binders:
+#kstream:
+#type: kstream
+#environment:
+#default:
+#key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+#value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
